@@ -1,7 +1,6 @@
 # --- START OF FILE normalizer.py ---
 import logging
-# import re # Если будете использовать re
-
+# import re # if needed
 _LOGGER = logging.getLogger(__name__)
 
 class TextNormalizer:
@@ -13,7 +12,7 @@ class TextNormalizer:
             return ""
         _LOGGER.debug(f"Original text for normalization: '{text}'")
         processed_text = text.replace("*", "")
-        # processed_text = re.sub(r'\s+', ' ', processed_text).strip() # Пример
+        # processed_text = re.sub(r'\s+', ' ', processed_text).strip() # example  
         _LOGGER.debug(f"Normalized text: '{processed_text}'")
         return processed_text
 # --- END OF FILE normalizer.py ---
