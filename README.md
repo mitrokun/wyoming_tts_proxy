@@ -1,5 +1,5 @@
-# wyoming_tts_proxy
-Draft.
+# wyoming tts proxy
+Draft. Removing asterisks from text.
 
 ### Run
 `python -m wioming_tts_proxy --uri tcp://0.0.0.0.0:10201 --upstream-tts-uri tcp://127.0.0.0.1:10200
