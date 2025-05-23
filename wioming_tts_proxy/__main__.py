@@ -15,11 +15,11 @@ from .handler import TTSProxyEventHandler
 from .normalizer import TextNormalizer
 
 
-PROXY_PROGRAM_NAME = "normalizing-tts-proxy"
+PROXY_PROGRAM_NAME = "tts-proxy"
 PROXY_PROGRAM_DESCRIPTION = "Wyoming TTS proxy with text normalization"
 PROXY_PROGRAM_VERSION = "0.1.0"
 PROXY_ATTRIBUTION_NAME = "My TTS Proxy"
-PROXY_ATTRIBUTION_URL = "https://github.com/your-repo"
+PROXY_ATTRIBUTION_URL = "https://github.com/mitrokun/wyoming_tts_proxy"
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -62,8 +62,8 @@ async def main() -> None:
     handler_factory = partial(
         TTSProxyEventHandler,
         proxy_program_info=proxy_program_basic_info,
-        cli_args=args, # Оставляем cli_args, если он нужен для чего-то еще
-        upstream_tts_uri_for_logging=args.upstream_tts_uri, # <--- ДОБАВЛЕНО для логирования
+        cli_args=args, 
+        upstream_tts_uri_for_logging=args.upstream_tts_uri,
         upstream_tts_client_factory=upstream_tts_client_factory,
         text_normalizer=text_normalizer,
     )
